@@ -1,0 +1,42 @@
+@import 'assets/styles/colors'
+
+.button
+  display: inline-block
+  position: relative
+  background: $black
+  color: $white
+  border: 0
+  border-radius: 3px
+  line-height: 30px
+  padding: 12px 36px
+  font-size: 16px
+  cursor: pointer
+  text-decoration: none
+  box-shadow: 0px 5px 10px #3a3a3a
+  transition: all 0.3s
+
+  &:active
+    box-shadow: 0px 4px 8px #2a2b2b
+    transform: scale(0.98)
+
+  &FullWidth
+    width: 100%
+
+  &Loading
+    pointer-events: none
+
+    .buttonContent
+      opacity: 0
+
+  &Disable
+    background: #7b7b7b
+    pointer-events: none
+
+  &Loader
+    position: absolute
+    height: 36px
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto

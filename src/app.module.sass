@@ -1,0 +1,38 @@
+.app
+	&Ready
+		.appBlind
+			pointer-events: none
+			&:before
+				transform: translateX(-100%)
+			&:after
+				transform: translateX(100%)
+
+		.appContent
+			opacity: 1
+			transition: opacity 0.3s ease 0.5s
+
+	&Blind
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 2
+
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			width: 50%
+			height: 100%
+			background: #000
+			transition: transform 0.6s ease
+
+		&:before
+			left: 0
+		&:after
+			right: 0
+
+	&Content
+		opacity: 0
+		transition: transform 0.6s ease

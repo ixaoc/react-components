@@ -1,0 +1,52 @@
+$blue: blue
+
+.main
+    display: grid
+    grid-template-columns: 260px 1fr
+    width: 920px
+.sidebar
+    border-radius: 16px 0 0 16px
+    padding: 30px
+    background: #F9F9F9
+.title
+    margin: 0
+.content
+    
+    position: relative
+    display: flex
+    flex-direction: column
+    flex: auto
+    padding: 30px
+
+    overflow: auto
+    &Loading
+        overflow: hidden
+
+    &::-webkit-scrollbar
+      width: 6px
+      background-color: transparent
+
+    &::-webkit-scrollbar-thumb
+      background-color: #3c82ce
+      border-radius: 4px
+
+    &::-webkit-scrollbar-track
+      -webkit-box-shadow: none
+      background-color: transparent
+
+    &Title
+        margin: 0
+
+.loader
+    display: flex
+    position: absolute
+    justify-content: center
+    align-items: center
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #fff
+    z-index: 12
+.bubbleLoader
+    color: $blue

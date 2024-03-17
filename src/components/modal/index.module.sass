@@ -1,0 +1,76 @@
+@import 'assets/styles/colors'
+
+.modal
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 999
+
+  &Bg
+    background: $black
+    opacity: 0.52
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+    &Transparent
+        opacity: 0
+
+  &Close
+    position: absolute
+    width: 40px
+    height: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    z-index: 1000
+    right: -70px
+    border: 2px solid
+    color: $white
+    border-radius: 10px
+    transition: border-radius 0.4s ease
+
+    &:hover
+      border-radius: 50%
+
+    &Icon
+      position: relative
+      width: 15px
+      height: 15px
+
+      &:before,
+      &:after
+        content: ""
+        position: absolute
+        width: 3px
+        height: 100%
+        background: $white
+        margin: auto
+        border-radius: 30px
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+
+      &:before
+        transform: rotate(45deg)
+        
+      &:after
+        transform: rotate(-45deg)
+
+  &Content
+    position: relative
+    background: $white
+    border-radius: 6px
+
+    &Inner
+      overflow: hidden
+      border-radius: 6px

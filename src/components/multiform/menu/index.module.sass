@@ -1,0 +1,73 @@
+$black: #000
+$white: #fff
+
+.menu
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    row-gap: 12px
+    list-style: none
+    padding: 0
+    margin: 28px 0 0 0
+    &Item
+        display: flex
+        align-items: center
+        column-gap: 10px
+        line-height: 24px
+        &Active
+            color: $black
+            pointer-events: none
+
+        &Text
+            position: relative
+
+        &Clickable
+            cursor: pointer
+
+.menuStepper
+    .menuItem
+        color: #8E8E93
+        &Active
+            color: $black
+
+.menuList
+    align-items: initial
+    row-gap: 16px
+
+    .menu
+        &Item
+            position: relative
+            &Active
+                &:before
+                    content: ""
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    left: -15px
+                    background: #F0F0F0
+                    padding: 8px 15px
+                    border-radius: 10px
+
+        &Check
+            display: none
+
+.check
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 20px
+    height: 20px
+    background: #E3E3E4
+    border-radius: 20px
+
+    &Active
+        &:before
+            content: ""
+            display: block
+            width: 4px
+            height: 4px
+            background: $white
+            border-radius: 4px
+
+    &Complete
+        background: #07DD89

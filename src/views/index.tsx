@@ -1,0 +1,8 @@
+export { HomePage } from './home'
+export { InputPage } from './input'
+export { TablePage } from './table'
+export { SelectPage } from './select'
+export { ModalPage } from './modal'
+export { MultiPage } from './multi'
+export { ButtonsPage } from './buttons'
+export { LessonsPage } from './lessons'

@@ -1,0 +1,62 @@
+@import 'assets/styles/colors'
+
+.layout
+  display: grid
+  grid-template-columns: 350px auto
+  min-height: 100vh
+  background: rgb(248,248,248)
+
+.sidebar
+  #height: 100vh
+  display: flex
+  flex-direction: column
+  #justify-content: center
+ 
+  &Bg
+    position: fixed
+    top: 0
+    width: 350px
+    height: 100vh
+    background: $white
+    border-right: 1px solid rgb(235,235,235)
+
+  &Inner
+    position: relative
+    padding: 70px
+    width: 350px
+
+.logo
+  font-weight: 700
+  text-align: left
+  font-size: 26px
+  text-transform: uppercase
+
+.menu
+  display: flex
+  flex-direction: column
+  padding: 44px 0px 50px
+  gap: 4px
+
+  a
+    font-size: 15px
+    line-height: 30px
+    font-weight: 500
+
+    color: rgb(118,118,118)
+    text-decoration: none
+
+    transition-duration: 300ms
+    transition-property: all
+    transition-timing-function: cubic-bezier(.4,0,.2,1)
+
+    &.menuActive
+      color: $black
+
+@media (min-height: 620px)
+  .sidebar
+    height: 100vh
+    justify-content: center
+    &Inner
+      position: fixed
+      
+

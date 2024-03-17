@@ -1,0 +1,22 @@
+$white: #fff
+
+.check
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 20px
+    height: 20px
+    background: #E3E3E4
+    border-radius: 20px
+
+    &Active
+        &:before
+            content: ""
+            display: block
+            width: 4px
+            height: 4px
+            background: $white
+            border-radius: 4px
+
+    &Complete
+        background: #07DD89

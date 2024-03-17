@@ -1,0 +1,7 @@
+const CrossFill = () => ( 
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fillRule="evenodd" clipRule="evenodd" d="M12 4L11.8237 4.00509C10.2489 4.09634 9 5.40232 9 7V9H7C5.34315 9 4 10.3431 4 12V16L4.00509 16.1763C4.09634 17.7511 5.40232 19 7 19H9V21C9 22.6569 10.3431 24 12 24H16L16.1763 23.9949C17.7511 23.9037 19 22.5977 19 21V19H21C22.6569 19 24 17.6569 24 16V12L23.9949 11.8237C23.9037 10.2489 22.5977 9 21 9H19V7C19 5.34315 17.6569 4 16 4H12Z" fill="#007AFF"/>
+    </svg>
+)
+
+export default CrossFill

@@ -1,0 +1,131 @@
+.button
+  position: relative
+  width: 200px
+  height: 56px
+  display: flex
+  justify-content: center
+  align-items: center
+  &:active
+    top: 0
+
+.text
+  width: calc(100% - 24px)
+  color: white
+  position: absolute
+  transition: opacity 300ms
+  user-select: none
+  -moz-user-select: none
+
+.fingerprint
+  width: 70px
+  height: 70px
+  left: 1px
+  top: -7px
+  opacity: 0
+  position: absolute
+  stroke: #777
+  transition: opacity 1ms
+
+.fingerprintActive
+  stroke: #fff
+
+.fingerprintOut
+  opacity: 1
+
+.odd
+  stroke-dasharray: 0px 50px
+  stroke-dashoffset: 1px
+  transition: stroke-dasharray 1ms
+
+.even
+  stroke-dasharray: 50px 50px
+  stroke-dashoffset: -41px
+  transition: stroke-dashoffset 1ms
+
+.ok
+  opacity: 0
+  position: absolute
+  width: 70px
+  height: 70px
+
+.active.button
+  animation: 6s Container
+
+.active .text
+  opacity: 0
+  animation: 6s Text forwards
+
+.active .fingerprint
+  opacity: 1
+  transition: opacity 300ms 200ms
+
+.active .fingerprintBase .odd
+  stroke-dasharray: 50px 50px
+  transition: stroke-dasharray 800ms 100ms
+
+.active .fingerprintBase .even
+  stroke-dashoffset: 0px
+  transition: stroke-dashoffset 800ms
+
+.active .fingerprintActive .odd
+  stroke-dasharray: 50px 50px
+  transition: stroke-dasharray 2000ms 1500ms
+
+.active .fingerprintActive .even
+  stroke-dashoffset: 0px
+  transition: stroke-dashoffset 2000ms 1300ms
+
+.active .fingerprintOut
+  opacity: 0
+  transition: opacity 300ms 4100ms
+
+.active .ok
+  opacity: 1
+  animation: 6s Ok forwards
+
+@keyframes Container 
+  0%
+    width: 200px
+  6%
+    width: 56px
+
+  94%
+    width: 56px
+  100%
+    width: 200px
+
+@keyframes Text
+  0%
+    opacity: 1
+    transform: scale(1)
+  6%
+    opacity: 0
+    transform: scale(0.5)
+
+  94%
+    opacity: 0
+    transform: scale(0.5)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+@keyframes Ok
+  0%
+    opacity: 0
+  70%
+    opacity: 0
+    transform: scale(0)
+  75%
+    opacity: 1
+    transform: scale(1.1)
+  77%
+    opacity: 1
+    transform: scale(1)
+  92%
+    opacity: 1
+    transform: scale(1)
+  96%
+    opacity: 0
+    transform: scale(0.5)
+  100%
+    opacity: 0

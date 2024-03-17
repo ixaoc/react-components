@@ -1,0 +1,115 @@
+@import 'assets/styles/colors'
+
+.select
+  font-size: 1rem
+  position: relative
+  width: 100%
+  padding: 9px 16px
+  padding-right: 38px
+  cursor: pointer
+  border: 1px solid $inpuBorderGray
+  border-radius: 0.45rem
+  border-radius: 10px
+  background-color: $white
+
+  &:after
+    content: ""
+    border: none
+    display: block
+    position: absolute
+    top: 50%
+    margin-top: -14px
+    width: 28px
+    height: 28px
+    right: 10px
+
+    opacity: .2
+    
+    background-size: 100%
+
+  &Open
+    &:after
+      transform: rotate(180deg)
+
+  &Error
+    border-color: $red
+
+  &Text
+    display: flex
+    align-items: center
+    height: 30px
+
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  &Disabled
+    background: $disabledGray
+    cursor: default
+    pointer-events: none
+
+.wrapper
+  position: relative
+
+.valueList
+  width: 100%
+  list-style: none
+  padding: 0
+  margin: 0
+  overflow-y: auto
+
+  &::-webkit-scrollbar
+    background-color: $white
+    width: 16px
+
+  &::-webkit-scrollbar-button
+    display: none
+
+  &::-webkit-scrollbar-thumb
+    background-color: #c4c4c4
+    border-radius: 16px
+    border: 5px solid $white
+    height: 50px
+
+  li
+    width: 100%
+    display: block
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    padding: 9px 15px
+    cursor: pointer
+    transition: background-color .3s,color .3s
+
+    &:hover
+      background-color: $disabledGray
+
+.values
+  display: none
+  position: absolute
+  width: 100%
+  top: 100%
+  left: 0
+  z-index: 2
+  max-height: 32vh
+  overflow: hidden
+  padding: 0.35rem 0
+  margin: 0.125rem 0 0
+  color: #212529
+  list-style: none
+  background-color: $white
+
+  border: 1px solid $inpuBorderGray
+  border-radius: 0.45rem
+
+  &Open
+    display: flex
+    flex-direction: column
+
+.placeholder
+  color: #ccc
+
+.texts
+  position: absolute
+  z-index: 1
+
